@@ -1,0 +1,23 @@
+/* change the heading text in 3 ways. */
+/* change appearance of h1 */
+h1 {
+    color: red; /* changes color  */
+    text-align: center; /* changes alignment of text */
+    font-family: 'Brush Script MT', cursive; /* sets the font */
+    /* NB : Brush Script MT may not be compatible with all browsers */
+    /* font-family: "Times New Roman", Times, serif; */  /* alternate font */ 
+    font-weight: 800; /* sets weight or thickness of font */
+    font-size: 300%; /* can use %, px, em, small/medium/large etc.  */
+    /* below is just bonus to reposition the text on screen. not really changing 'appearance' */
+    padding: 4em; /* sets padding space on all sides */ 
+}
+/* always refer the best available documentation */ 
+/* https://developer.mozilla.org/en/docs/Web/CSS/color */ 
+/* https://developer.mozilla.org/en/docs/Web/CSS/color_value */
+/* https://developer.mozilla.org/en/docs/Web/CSS/text-align */ 
+/* https://developer.mozilla.org/en/docs/Web/CSS/font */
+/* https://developer.mozilla.org/en/docs/Web/CSS/font-weight */
+/* https://developer.mozilla.org/en/docs/Web/CSS/font-size */ 
+/* https://developer.mozilla.org/en/docs/Web/CSS/padding */ 
+/* one of many useful css font checkers - http://www.cssfontstack.com/brush-script-mt */
+/* follow me on github https://github.com/aspiringguru */ 
