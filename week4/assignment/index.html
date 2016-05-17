@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>LAPTOPS LAPTOPS LAPTOPS</title>
+
+		<!-- import bootstrap -->
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="bootstrap.css"
+		      />
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="styles.css"
+		      />
+		<!-- import jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+
+	<body>
+	<div class="container">
+		<h1>Product Gallery</h1>
+
+		<div class="row">
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="alienware-17-r3-500.jpg" 
+				  alt="alienware-17-r3-500"
+				  myvalue="Alienware has updated its 17-inch gaming laptop for 2016 with an Intel 6th Generation Core i7 CPU and the latest Nvidia GTX 970M or 980M graphics.The Alienware 17 R3 also offers an optional 4K display that's brighter and more colorful than almost any other screen in its class. Sporting the company's attractive sci-fi chassis and customizable keyboard, the laptop starts at a relatively-affordable $1,500, but if you have money to spare, you can get an overclockable processor, a bigger SSD and Alienware's signature graphics amp, which brings the best desktop GPUs to the notebook world. "/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="razer-glade-nw-g01.jpg" 
+				  alt="razer-glade-nw-g01"
+				  myvalue="Svelte, lightweight chassis; Gorgeous, customizable backlit keys; Dazzling, vibrant display; Excellent graphics and overall performance; Blistering transfer speeds, Below-average battery life. The Razer Blade is chock-full of win, packing a powerful Core i7 processor, Nvidia graphics, a 4K display and a customizable backlit keyboard in a sexy, slim chassis."/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="rog-gl552-lead.jpg" 
+				  alt="rog-gl552-lead"
+				  myvalue="Strong full HD gaming performance; Bright and accurate matte display; USB 3.1 Type-C Port; Speedy 7,200 RPM HDD. Left vent gets really hot when gaming; Poor webcam; Mediocre battery life. The Asus ROG GL552 is a top-notch gaming laptop that won't bust your budget."/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<button onclick="myHelpFunction()">Help</button>
+				<p id="liveText"></p>
+			</div>
+		</div>
+		<!--
+			this is the large image which is
+			on a row of its own. 
+			I will change it source in the 
+			javascript
+		-->
+		<div class="row">
+			<div class="col-md-6">
+				<img id="bigImage" 
+				  class="large-img" 
+				  src="start_image.png" 
+				  alt="Start Image"/> 
+			</div>
+			<div class="col-md-6 sansserif">
+				<h1>Product Details</h1>
+				<p id="pictText"></p>
+				<p id="detailsText"></p>
+
+			</div>
+		</div><!-- end div row -->
+	</div>
+
+	<script>
+		// when we click on the thumbnail
+		// we set the src attribute of the 
+		// bit image to be the same as the 
+		// src of the image we have clicked on
+		// ("this"). This loads the same
+		// image file into the big image
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src',  $(this).attr('src'));
+			document.getElementById("pictText").innerHTML = $(this).attr('alt');
+			document.getElementById("detailsText").innerHTML = $(this).attr('myvalue');
+		});
+		function myHelpFunction() {
+    		document.getElementById("liveText").innerHTML = "Click on the photos above for larger photo and product details.";
+		}
+	</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
