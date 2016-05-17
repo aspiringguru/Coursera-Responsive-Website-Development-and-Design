@@ -12,7 +12,8 @@
 			  href="styles.css"
 		      />
 		<!-- import jQuery -->
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="jquery-1.11.3.min.js"></script>
+		<script src="my_scripts.js"></script>
 	</head>
 
 	<body>
@@ -66,24 +67,20 @@
 			</div>
 		</div><!-- end div row -->
 	</div>
-
 	<script>
-		// when we click on the thumbnail
-		// we set the src attribute of the 
-		// bit image to be the same as the 
-		// src of the image we have clicked on
-		// ("this"). This loads the same
-		// image file into the big image
-		$(".crop-img").click(function(){
-			$("#bigImage").attr('src',  $(this).attr('src'));
-			document.getElementById("pictText").innerHTML = $(this).attr('alt');
-			document.getElementById("detailsText").innerHTML = $(this).attr('myvalue');
-		});
-		function myHelpFunction() {
-    		document.getElementById("liveText").innerHTML = "Click on the photos above for larger photo and product details.";
-		}
+	// when we click on the thumbnail
+	// bit image to be the same as the 
+	// src of the image we have clicked on
+	// ("this"). This loads the same
+	// image file into the big image
+	//this is a jquery function
+	//NB: tried moving this jquery to external .js file but it failed.
+	$(".crop-img").click(function(){
+	  $("#bigImage").attr('src',  $(this).attr('src'));
+	  document.getElementById("pictText").innerHTML = $(this).attr('alt');
+	  document.getElementById("detailsText").innerHTML = $(this).attr('myvalue');
+	});
 	</script>
-
 	</body>
 </html>
 
